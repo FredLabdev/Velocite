@@ -1,0 +1,258 @@
+body {
+    padding-top: 10px;
+}
+
+
+[class*="col-"],
+footer {
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* =================================================== */
+/*                    Diaporama                        */
+/* =================================================== */
+
+#slider {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#allPlan {
+    width: 760px;
+    height: 300px;
+    margin: auto;
+    perspective: 300px;
+    -webkit-perspective: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan {
+    width: 220px;
+    height: 200px;
+    background-color: #7ea04a;
+    color: #212529;
+    border: solid dimgray 3px;
+    box-shadow: 4px 4px 0px silver;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.p4,
+.p5,
+.p6 {
+    transform: rotateY(60deg);
+    -webkit-transform: rotateY(60deg);
+}
+
+.p4 {
+    left: 0px;
+}
+
+.p5 {
+    left: 50px;
+}
+
+.p6 {
+    left: 100px;
+}
+
+.p0 {
+    left: 270px;
+    transform: translateZ(95px);
+    -webkit-transform: translateZ(95px);
+    -moz-transform: translateZ(95px);
+}
+
+.p1,
+.p2,
+.p3 {
+    transform: rotateY(-60deg);
+    -webkit-transform: rotateY(-60deg);
+    -moz-transform: rotateY(-60deg);
+}
+
+.p1 {
+    left: 440px;
+}
+
+.p2 {
+    left: 490px;
+}
+
+.p3 {
+    left: 540px;
+}
+
+
+/*--Contrôles du diaporama du mode d'emploi--*/
+
+#commandes_diapo button {
+    padding: 5px;
+    border: solid #FFF 1px;
+    border-radius: 10px;
+    color: #FFF;
+    text-align: center;
+    background-color: #212529;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+#commandes_diapo button:hover {
+    cursor: pointer;
+    background-color: #FFF;
+    color: #212529;
+}
+
+/* =================================================== */
+/*                    Map                              */
+/* =================================================== */
+
+#mapid {
+    border: solid black 3px;
+    height: 500px;
+}
+
+/* =================================================== */
+/*                    Station                          */
+/* =================================================== */
+
+#station {
+    border: solid dimgray 3px;
+    box-shadow: 4px 4px 0px silver;
+    border-radius: 15px;
+}
+
+#station span {
+    position: relative;
+    top: -15px;
+    background-color: #212529;
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+#son_statut {
+    padding: 5px;
+}
+
+.large-div {
+    height: 200px;
+}
+
+/* =================================================== */
+/*                Messages réservation                 */
+/* =================================================== */
+
+#annulation {
+    background-color: red;
+    color: #FFF;
+    margin: 0;
+    float: right;
+    position: relative;
+    top: 10px;
+}
+
+/* =================================================== */
+/*                    Signature                        */
+/* =================================================== */
+
+#signature {
+    text-align: center;
+}
+
+#signature_canvas {
+    border: double black 5px;
+    box-shadow: 4px 4px 0px silver;
+    background-color: #FFF;
+    text-align: center;
+}
+
+#valider {
+    background-color: limegreen;
+}
+
+#effacer {
+    background-color: red;
+}
+
+/* ============================================================================ */
+/*                           Medias Quereies Smartphones                        */
+/* ============================================================================ */
+
+@media all and (max-width: 768px) {
+
+    main {
+        background-color: red;
+    }
+
+    nav.fixed-top {
+        position: relative;
+    }
+
+    /* =================================================== */
+    /*                    Diaporama                        */
+    /* =================================================== */
+
+    #diaporama {
+        height: 320px;
+    }
+
+    .p0 {
+        transform: translateZ(50px);
+        -webkit-transform: translateZ(50px);
+        -moz-transform: translateZ(50px);
+        left: 70px;
+        z-index: 1000;
+    }
+
+    .p1,
+    .p2,
+    .p3,
+    .p4,
+    .p5,
+    .p6 {
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        left: 70px;
+    }
+
+    #commandes_diapo {
+        left: 20px;
+    }
+
+    #commandes_diapo button {
+        width: 100px;
+    }
+
+    /* =================================================== */
+    /*                    Map                              */
+    /* =================================================== */
+
+    #mapid {
+        height: 200px;
+    }
+
+    #station {
+        height: auto;
+    }
+
+    .large-div {
+        height: auto;
+    }
+
+}
